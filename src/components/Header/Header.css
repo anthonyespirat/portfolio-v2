@@ -1,0 +1,10 @@
+header button {
+    background-image: linear-gradient(262.85deg, rgba(191, 210, 234, 0.051) 0%, rgba(248, 248, 248, 0.01) 100%);
+    transition:2s linear;
+}
+header button:hover {
+    background-image: linear-gradient(262.85deg, rgba(191, 210, 234, 0.1) 0%, rgba(248, 248, 248, 0.1) 100%);
+} 
+.current-page {
+    @apply text-white
+}
