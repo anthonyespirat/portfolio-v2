@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import AnimatedCursor from "react-animated-cursor"
 
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header'
@@ -16,6 +17,10 @@ import {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <AnimatedCursor
+    color='86,136,199'
+    innerSize={10}
+    />
     <Header />
       <Switch>
         <Route exact path='/'>
