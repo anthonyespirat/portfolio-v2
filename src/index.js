@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import AnimatedCursor from "react-animated-cursor"
 
 import Home from './pages/Home/Home';
+import ListCreations from './pages/ListCreations/ListCreations';
 import Header from './components/Header/Header'
 
 import {
@@ -12,6 +13,7 @@ import {
   Route,  
   Switch
 } from "react-router-dom"
+
 
 
 ReactDOM.render(
@@ -23,9 +25,15 @@ ReactDOM.render(
     />
     <Header />
       <Switch>
+        
         <Route exact path='/'>
           <Home />
         </Route>
+        <Route exact path='/creations'>
+          <ListCreations />
+        </Route>
+         
+        
       </Switch>
     </Router>
   </React.StrictMode>,

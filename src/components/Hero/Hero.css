@@ -1,22 +1,11 @@
 #hero {
-    min-height: 70vh;
+    min-height: 80vh;
     position: relative;
 }
-/* #hero:after{
-    content: '';
-    min-height: 100%;
-    width: 50%;
-    position: absolute;
-    bottom: -50%;
-    right: -20%;
-    background: radial-gradient(55.52% 55.52% at 50% 50%, rgba(86, 136, 199, 0) 0%, rgba(86, 136, 199, 0.7) 0.01%, rgba(27, 33, 37, 0) 100%);
-    filter: blur(120px);
-} */
-
-@media (max-width:768px) {
-    #hero:after {
-    }
+.mouse {
+    min-height: 10vh;
 }
+
 .background-1 {
     position: absolute;
     right: -60%;

@@ -11,7 +11,7 @@ const Header = () => {
             <nav className='flex-grow md:flex items-center justify-center text-lg hidden'>
                 <NavLink exact to="/" className="px-5 text-gray-400 hover:text-white" activeClassName="current-page"> Accueil </NavLink> &bull;
 
-                <NavLink exact to="/a-propos" className="px-5 text-gray-400 hover:text-white" activeClassName="current-page"> À propos </NavLink> &bull;
+                <a href='#about' className="px-5 text-gray-400 hover:text-white" activeClassName="current-page"> À propos </a> &bull;
                 
                 <NavLink exact to="/creations" className="px-5 text-gray-400 hover:text-white" activeClassName="current-page"> Mes créations </NavLink>
             </nav>

@@ -35,7 +35,7 @@ module.exports = {
       DEFAULT : "10px"
      },
      container : {
-       padding : '2em',
+       padding : '1.5em',
      },
      extend: {},
    },

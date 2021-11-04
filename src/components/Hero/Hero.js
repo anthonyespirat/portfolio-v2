@@ -1,4 +1,3 @@
-import React from 'react';
 import './Hero.css'
 import Mouse from    './Mouse/Mouse'
 
@@ -10,7 +9,7 @@ const Hero = () => {
             <p className='py-2 text-gray-400 text-xl tracking-wide'>Ma passion, c’est le web</p>
             <span className="background-1"></span>
         </div>
-        <Mouse />
+        <Mouse className='mouse' />
         </>
     );
 };
