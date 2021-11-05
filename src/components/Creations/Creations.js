@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import Creation from './SingleCreation/Creation'
+import Creation from './ThumbCreation/ThumbCreation'
 import Loading from './Loading/Loading';
 import './Creations.css'
 import { NavLink } from 'react-router-dom'
@@ -45,6 +45,7 @@ const Creations = ({renderBy}) => {
             ) : (
                 <></>
             )}
+            <span className="background-1"></span>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import './Creation.css'
+import './ThumbCreation.css'
 
 const Creations = ({crea, api}) => {
     const thumb = crea.thumb
