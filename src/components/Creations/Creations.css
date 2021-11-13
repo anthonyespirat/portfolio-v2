@@ -8,3 +8,34 @@ button.see-more {
 button.see-more:hover {
     background-image: linear-gradient(262.85deg, rgba(191, 210, 234, 0.1) 0%, rgba(248, 248, 248, 0.1) 100%);
 }
+
+#creations {
+    position: relative;
+}
+
+#creations h2:after {
+    content: '';
+    background: radial-gradient(52.49% 52.49% at 50% 50%, rgba(86, 136, 199, 0.5) 0%, rgba(86, 136, 199, 0) 100%);
+    filter: blur(60px);
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: -300px;
+    width: 600px;
+    opacity: 1;
+    min-height: 500px;
+    z-index: -1;
+}
+#creations:before {
+    content:'';
+    z-index: -1;
+    position: absolute;
+    left: -350px;
+    top: 50px;
+    display: block;
+    min-height: 550px;
+    width: 700px;
+    border-radius: 100%;
+    border: 1px solid rgba(86, 136, 199, 0.4);
+    transform: rotate(45deg);
+}
