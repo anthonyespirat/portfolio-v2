@@ -1,0 +1,59 @@
+.box {
+    background: linear-gradient(260.81deg, rgba(86, 136, 199, 0.3) -27.83%, rgba(222, 230, 240, 0.15) 176.02%, rgba(85, 136, 201, 0.06) 176.02%);
+    border: 1px solid rgba(224, 224, 224, 0.2);
+    height: min-content;
+    
+    @apply rounded px-1 py-3 flex justify-center; 
+}
+.box > *{
+    z-index: 99;
+    @apply px-2 flex items-center;
+}
+#skill {
+    position: relative;
+}
+.bg-blue:after {
+    content: '';
+    background: radial-gradient(52.49% 52.49% at 50% 50%, rgba(86, 136, 199, 0.5) 0%, rgba(86, 136, 199, 0) 100%);
+    filter: blur(60px);
+    display: block;
+    position: absolute;
+    top: -300px;
+    right: -400px;
+    width: 700px;
+    height: 700px;
+    opacity: 1;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#skill:after {
+    content:'';
+    position: absolute;
+    right: -480px;
+    bottom: -260px;
+    z-index: -1;
+    display: block;
+    min-height: 750px;
+    width: 900px;
+    border-radius: 100%;
+    border: 1px solid rgba(86, 136, 199, 0.4);
+    transform: rotate(45deg);
+}
+#skill:before {
+    content:'';
+    position: absolute;
+    right: -480px;
+    bottom: -200px;
+    z-index: -1;
+    display: block;
+    min-height: 750px;
+    width: 900px;
+    border-radius: 100%;
+    border: 1px solid rgba(86, 136, 199, 0.4);
+    transform: rotate(45deg);
+}
+
+.skill-text > * {
+    @apply text-center lg:text-left;
+}

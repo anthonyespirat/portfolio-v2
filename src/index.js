@@ -7,6 +7,7 @@ import AnimatedCursor from "react-animated-cursor"
 import Home from './pages/Home/Home';
 import ListCreations from './pages/ListCreations/ListCreations';
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 import {
   BrowserRouter as Router,
@@ -35,6 +36,7 @@ ReactDOM.render(
          
         
       </Switch>
+      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

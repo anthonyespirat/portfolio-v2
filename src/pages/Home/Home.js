@@ -4,6 +4,8 @@ import Hero from '../../components/Hero/Hero'
 import About from '../../components/About/About'
 import Creations from '../../components/Creations/Creations'
 import Skill from '../../components/Skill/Skill';
+import Quote from '../../components/Quote/Quote';
+import Contact from '../../components/Contact/Contact';
 
 
 
@@ -16,6 +18,8 @@ const Home = () => {
         <About/>
         <Creations renderBy='Home'/>
         <Skill />
+        <Quote />
+        <Contact />
         </div>
         </>
     );

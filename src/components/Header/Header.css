@@ -11,3 +11,21 @@ header button:hover {
 .current-page {
     @apply text-white
 }
+
+
+/* MenuMobile CSS */
+#mobile-menu {
+    width: 30px;
+    background-image: none;
+
+} 
+#mobile-menu span {
+    opacity: 0.9;
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: white;
+}
+#mobile-menu span:nth-child(3) {
+    background-color: red;
+}

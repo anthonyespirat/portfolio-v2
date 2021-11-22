@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <header className="p-5 flex">
+        <header className="p-5 flex justify-between">
             {/* LOGO */}
             <div className="logo uppercase text-3xl font-light">Anthony <span className="text-primary">E</span>.</div>
 
@@ -15,8 +15,8 @@ const Header = () => {
                 
                 <NavLink exact to="/creations" className="px-5 text-gray-400 hover:text-white" activeClassName="current-page"> Mes créations </NavLink>
             </nav>
-
-            <button className="py-2 px-8 border border-gray-400 rounded font-semibold text -xl">Contact</button>
+            <button id='mobile-menu' className='md:hidden'> <span></span><span></span><span></span> </button>
+            <button className="py-2 px-8 border border-gray-400 rounded font-semibold hidden md:block">Contact</button>
         </header>
     );
 };

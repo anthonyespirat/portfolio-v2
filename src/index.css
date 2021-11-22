@@ -14,4 +14,11 @@ body {
 }
 html {
    scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+footer {
+   background-color: #2C3235;
+}
+*:after, *:before {
+   display: none;
 }
