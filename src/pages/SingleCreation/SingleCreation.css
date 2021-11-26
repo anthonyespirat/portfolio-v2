@@ -1,0 +1,8 @@
+#creation img {
+    @apply rounded;
+}
+#creation .btn {
+    @apply w-1/2 block mx-auto;
+    background: linear-gradient(262.85deg, rgba(191, 210, 234, 0.051) 0%, rgba(248, 248, 248, 0.054) 100%);
+    border: 1px solid #AFAFAF;
+}
