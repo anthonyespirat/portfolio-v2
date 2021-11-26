@@ -7,12 +7,11 @@ import { NavLink } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 
 const Creations = ({renderBy}) => {
-    const apiUrl = 'https://api.e-anthony.fr'
     const [data, setData] = useState([])
 
     useEffect(() => {
         async function getCrea() {
-            await fetch('https://api.e-anthony.fr/creations')
+            await fetch(window.api + '/creations')
             .then(res=>res.json())
             .then(data=>{
                 if (renderBy === 'Home'){
@@ -37,7 +36,7 @@ const Creations = ({renderBy}) => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'>
                 {
                     data ? (
-                        data.map((crea,index) => (<ThumbCreation key={index} crea={crea} api={apiUrl} />)))
+                        data.map((crea,index) => (<ThumbCreation key={index} crea={crea} api={window.api} />)))
                         : (<Loading/>)
                 }
                 </div>

@@ -17,7 +17,8 @@ import {
   Switch
 } from "react-router-dom"
 
-
+//ADRESSE DE L'API
+window.api = "https://api.e-anthony.fr"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -36,8 +37,7 @@ ReactDOM.render(
           <ListCreations />
         </Route>
         <Route path='/creation/:id' component={SingleCreation} />
-  
-         
+   
       </Switch>
       <Footer />
     </Router>
