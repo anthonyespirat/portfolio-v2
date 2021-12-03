@@ -14,7 +14,8 @@ import Footer from './components/Footer/Footer'
 import {
   BrowserRouter as Router,
   Route,  
-  Switch
+  Switch,
+  Redirect
 } from "react-router-dom"
 
 //ADRESSE DE L'API
@@ -36,7 +37,9 @@ ReactDOM.render(
         <Route exact path='/creations'>
           <ListCreations />
         </Route>
-        <Route path='/creation/:id' component={SingleCreation} />
+        <Redirect from='/creation' to='/#creations' exact />
+        <Route path='/creation/:id' component={SingleCreation}>
+        </Route>
    
       </Switch>
       <Footer />

@@ -15,10 +15,9 @@ const Creations = ({renderBy}) => {
             .then(res=>res.json())
             .then(data=>{
                 if (renderBy === 'Home'){
-                    let dataSliced = data.slice(-6).reverse()
-                    setData(dataSliced)
+                    setData(data.slice(-6).reverse())
                 } else {
-                    setData(data)
+                    setData(data.reverse())
                 }
             })
         }
