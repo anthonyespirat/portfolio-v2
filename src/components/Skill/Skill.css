@@ -14,14 +14,11 @@
 }
 .bg-blue:after {
     content: '';
-    background: radial-gradient(52.49% 52.49% at 50% 50%, rgba(86, 136, 199, 0.5) 0%, rgba(86, 136, 199, 0) 100%);
-    filter: blur(60px);
+    content: url('@/assets/images/radial-min.png');
     display: block;
     position: absolute;
-    top: -300px;
-    right: -400px;
-    width: 700px;
-    height: 700px;
+    top: -400px;
+    right: -700px;
     opacity: 1;
     min-height: 100%;
     z-index: -1;

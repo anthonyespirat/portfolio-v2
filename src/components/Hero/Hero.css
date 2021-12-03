@@ -53,13 +53,11 @@ h1 {
 }
 
 #hero h1:after {
-    content: '';
-    background: radial-gradient(52.49% 52.49% at 50% 50%, rgba(86, 136, 199, 0.5) 0%, rgba(86, 136, 199, 0) 100%);
-    filter: blur(60px);
+    content: url('@/assets/images/radial-min.png');
     display: block;
     position: absolute;
-    top: 200px;
-    right: -200px;
+    top: -100px;
+    right: -10%;
     width: 45%;
     opacity: 1;
     min-height: 100%;

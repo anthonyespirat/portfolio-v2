@@ -13,14 +13,12 @@ button.see-more:hover {
     position: relative;
 }
 
-#creations h2:after {
-    content: '';
-    background: radial-gradient(52.49% 52.49% at 50% 50%, rgba(86, 136, 199, 0.5) 0%, rgba(86, 136, 199, 0) 100%);
-    filter: blur(60px);
+#creations:after {
+    content: url('@/assets/images/radial-min.png');
     display: block;
     position: absolute;
-    top: 50px;
-    left: -300px;
+    top: -100px;
+    left: -30%;
     width: 600px;
     opacity: 1;
     min-height: 500px;
