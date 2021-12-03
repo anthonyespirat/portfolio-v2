@@ -34,9 +34,10 @@
     border-radius: 100%;
     border: 1px solid rgba(86, 136, 199, 0.4);
     transform: rotate(30deg);
-    z-index: -1;
+    z-index: -2;
 }
 #hero:before {
+    z-index: -2;
     content:'';
     position: absolute;
     right: -200px;
@@ -49,12 +50,13 @@
     transform: rotate(45deg);
 }
 h1 {
-    z-index: 1;
+    z-index: -1;
 }
 
 #hero h1:after {
     content: url('@/assets/images/radial-min.png');
     display: block;
+    z-index: -1;
     position: absolute;
     top: -100px;
     right: -10%;
