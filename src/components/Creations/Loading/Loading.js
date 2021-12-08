@@ -1,13 +1,9 @@
-import React from 'react';
 import './Loading.css'
-const Loading = () => {
-    return (
-        <div class="balls w-full">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    );
-};
 
-export default Loading;
+export default function Loading () {
+ return (
+    <div className="flex justify-center">
+        <div className="lds-ripple"><div></div><div></div></div>
+    </div>
+ )
+}

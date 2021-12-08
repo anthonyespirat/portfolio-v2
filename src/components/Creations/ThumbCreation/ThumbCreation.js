@@ -1,6 +1,8 @@
 import './ThumbCreation.css'
 import { Link } from 'react-router-dom'
 const Creations = ({crea, api}) => {
+
+
 const thumb = crea.thumb
     return (
         <div className="creation">
