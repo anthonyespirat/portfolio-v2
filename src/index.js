@@ -7,6 +7,7 @@ import AnimatedCursor from "react-animated-cursor"
 import Home from './pages/Home/Home';
 import ListCreations from './pages/ListCreations/ListCreations';
 import SingleCreation from './pages/SingleCreation/SingleCreation';
+import Test from './pages/Test/Test';
 
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -36,6 +37,9 @@ ReactDOM.render(
         </Route>
         <Route exact path='/creations'>
           <ListCreations />
+        </Route>
+        <Route exact path='/test'>
+          <Test />
         </Route>
         <Redirect from='/creation' to='/#creations' exact />
         <Route path='/creation/:id' component={SingleCreation}>

@@ -44,15 +44,17 @@ const Creations = ({renderBy}) => {
 
 
                 { loading &&
-                        data.map((crea,index) => (<ThumbCreation key={index} crea={crea} api={window.api}/>))
+                    data.map((crea,index) => (
+                        <ThumbCreation className='lol' key={index} crea={crea} api={window.api}/>
+                        )
+                    )
                 }
 
                 </div>
-                {renderBy === 'Home' ? (
+                {renderBy === 'Home' && (
                     <button className='see-more flex items-center self-center my-10'> <NavLink to='creations' className='font-medium underline text-lg mr-2 tracking-wider'>Voir + de creations</NavLink><BsArrowRight className='text-xl'/> </button>
-                ) : (
-                    <></>
-                )}
+                )
+                }
                 <div className="background-1"></div>
             </div>
     );
