@@ -6,7 +6,7 @@
     @apply rounded px-1 py-3 flex justify-center; 
 }
 .box > *{
-    z-index: 99;
+    z-index: 8;
     @apply px-2 flex items-center;
 }
 #skill {

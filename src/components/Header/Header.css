@@ -14,18 +14,50 @@ header button:hover {
 
 
 /* MenuMobile CSS */
-#mobile-menu {
+#mobile-btn {
     width: 30px;
     background-image: none;
+    z-index: 10;
 
 } 
-#mobile-menu span {
+#mobile-btn span {
     opacity: 0.9;
-    height: 1px;
+    height: 3px;
     width: 100%;
     display: block;
     background-color: white;
+    align-self: flex-end;
+    border-radius: 2px;
 }
-#mobile-menu span:nth-child(3) {
-    background-color: red;
+#mobile-btn span:nth-child(3) {
+    background-color: #FFF;
+}
+#mobile-btn span:nth-child(2) {
+    background-color: #FFF;
+    margin: 5px 0;
+}
+#mobile-btn span:nth-child(1) {
+    background-color: #FFF;
+}
+.mobile-menu {
+    position: fixed;
+    width: 100%;
+    background-color: #1B2125;
+    z-index: 9;
+    min-height: 0;
+    height: 0;
+    transition: 1s;
+}
+.mobile-menu.active {
+    min-height: 100vh;
+}
+
+.mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    font-size: 200%;
+    transition: 1s;
 }
