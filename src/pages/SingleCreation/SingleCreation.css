@@ -10,7 +10,9 @@
     cursor: not-allowed;
     text-decoration:line-through;
 }
-
+#creation {
+    min-height: 70vh;
+}
 
 /* FOR MARKDOWN  */
 #creation strong {

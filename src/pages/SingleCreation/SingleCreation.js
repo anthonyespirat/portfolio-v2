@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react';
 import './SingleCreation.css'
 import { useParams } from 'react-router';
 import ReactMarkdown from 'react-markdown';
+import PageTransition from '../../components/pageTransition.ts';
 
 const Images = ({crea, number}) => {
     let imgUrl; let imgAlt;
@@ -42,7 +43,7 @@ const SingleCreation = () => {
     }, [id])
 
     return (
-        <div id='creation' className='container mx-auto my-12'>
+        <div id='creation' className={'container mx-auto my-12' + PageTransition(100, 'opa')}>
             {data.map((crea,index) => <div key={crea.id}>
 
                 {/* Titre de la création */}

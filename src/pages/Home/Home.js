@@ -6,22 +6,23 @@ import Creations from '../../components/Creations/Creations'
 import Skill from '../../components/Skill/Skill';
 import Quote from '../../components/Quote/Quote';
 import Contact from '../../components/Contact/Contact';
+import PageTransition from '../../components/pageTransition.ts';
 
 
 
 const Home = () => {
 
     return (
-        <>
-        <Hero/>
-        <div className="container mx-auto mt-24">
-        <About/>
-        <Creations renderBy='Home'/>
-        <Skill />
-        <Quote />
-        <Contact />
+        <div className={'home ' + PageTransition(100, "opa")}>
+            <Hero/>
+            <div className="container mx-auto mt-24">
+            <About/>
+            <Creations renderBy='Home'/>
+            <Skill />
+            <Quote />
+            <Contact />
+            </div>
         </div>
-        </>
     );
 };
 

@@ -22,3 +22,21 @@ footer {
 *:after, *:before {
    display: none;
 }
+
+
+.home {
+   opacity: 0;
+   transition: opacity 0.7s;
+}
+.list-crea {
+   opacity: 0;
+   transition: opacity 0.7s;
+}
+#creation {
+   opacity: 0;
+   transition: opacity 0.7s;
+}
+
+.opa {
+   opacity: 1 !important;
+}
