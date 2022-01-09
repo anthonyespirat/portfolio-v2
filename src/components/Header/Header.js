@@ -30,7 +30,7 @@ const Header = () => {
                 <NavLink exact to="/creations" className="px-5 text-gray-400 hover:text-white" activeClassName="current-page"> Mes créations </NavLink>
             </nav>
             <button onClick={() => toggleMenu()} id='mobile-btn' className='md:hidden'> <span></span><span></span><span></span> </button>
-            <a href="#contact" className='hidden md:block'><button className="py-2 px-8 border border-gray-400 rounded font-semibold hidden md:block hover:bg-gray-400 hover:bg-opacity-10 transition duration-500">Contact</button></a>
+            <a href="/#contact" className='hidden md:block'><button className="py-2 px-8 border border-gray-400 rounded font-semibold hidden md:block hover:bg-gray-400 hover:bg-opacity-10 transition duration-500">Contact</button></a>
         </header>
 </>
     );
