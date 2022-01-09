@@ -1,6 +1,6 @@
 import React from 'react';
 import Creations from '../../components/Creations/Creations';
-import PageTransition from '../../components/pageTransition.ts';
+import PageTransition from '../../components/pageTransition.js';
 
 const ListCreations = () => {
     return (

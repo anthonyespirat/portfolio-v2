@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import './SingleCreation.css'
 import { useParams } from 'react-router';
 import ReactMarkdown from 'react-markdown';
-import PageTransition from '../../components/pageTransition.ts';
+import PageTransition from '../../components/pageTransition.js';
 
 const Images = ({crea, number}) => {
     let imgUrl; let imgAlt;

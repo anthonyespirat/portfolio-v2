@@ -40,3 +40,6 @@ footer {
 .opa {
    opacity: 1 !important;
 }
+.opa-none {
+   opacity: 0 !important;
+}

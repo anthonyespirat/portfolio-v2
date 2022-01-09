@@ -31,7 +31,7 @@ const Creations = ({renderBy}) => {
 
     return (
         
-            <div id='creations' className={`flex flex-col ${renderBy === 'Home' ? "my-32" : ""}`}>
+            <div id='creations' className={`flex flex-col ${renderBy === 'Home' ? "my-32" : "mb-12"}`}>
                 <div className='text-center my-20'>
                     <h2 className='font-semibold text-4xl tracking-wider'><span className='text-primary'>M</span>es créations</h2>
                     <span className='py-2 text-gray-400 text-xl'>Découvrez mes plus récentes créations</span>

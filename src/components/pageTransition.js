@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 
-const PageTransition = (delay: number, className: string) => {
+const PageTransition = (delay, className) => {
 
     const [classData,setClassData] = useState()
 
