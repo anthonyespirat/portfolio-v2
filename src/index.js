@@ -20,6 +20,8 @@ import {
 
 //ADRESSE DE L'API
 window.api = "https://api.e-anthony.fr"
+document.title = "Anthony Espira - Portfolio Dev & Design"
+
 
 ReactDOM.render(
   <React.StrictMode>
