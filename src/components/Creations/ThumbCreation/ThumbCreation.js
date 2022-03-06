@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Creations = ({crea, api, loading}) => {
     
-
+console.log(crea);
 /*
     const [creaClass, setCreaClass] = useState("creation")
 
@@ -17,8 +17,8 @@ const Creations = ({crea, api, loading}) => {
 const thumb = crea.thumb
     return (
         <>
-            <Link to={'/creation/' + crea.id}>
-                 <img src={thumb ? api+thumb.url : ''} alt="" className="rounded w-full" />
+            <Link to={'/creation/' + crea.id} className="thumb flex justify-center items-center">
+                 <img src={thumb ? api+thumb.url : ''} alt="" className="rounded object-cover object-top" />
             </Link>
         </>
     );

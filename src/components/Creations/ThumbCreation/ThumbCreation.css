@@ -2,3 +2,32 @@
     opacity: 0;
     transition: 1s;
 }
+.thumb {
+    background: linear-gradient(305.25deg, rgba(45, 55, 65, 0.76) -50.98%, rgba(21, 21, 21, 0.8) 100%);
+    border-radius: 20px;
+    @apply px-12 py-12;
+    position: relative;
+}
+.thumb img {
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+.thumb::before {
+    content: "";
+    position: absolute;
+    display: block;
+    opacity: 0;
+    min-width: 100%;
+    border-radius: 20px;
+    min-height: 100%;
+    background-color: rgba(32, 46, 66, 0.726);
+    z-index: 99;
+    transition: opacity 0.4s;
+}
+
+.thumb:hover.thumb::before {
+    opacity: 1;
+}
