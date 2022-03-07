@@ -13,8 +13,8 @@ const Creations = ({renderBy}) => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        async function getCrea() {
-            await fetch(window.api + '/creations')
+        function getCrea() {
+            fetch(window.api + '/creations')
             .then(res=>res.json())
             .then(data=>{
                 setLoading(true)

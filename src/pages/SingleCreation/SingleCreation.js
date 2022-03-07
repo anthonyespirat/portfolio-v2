@@ -3,8 +3,11 @@ import './SingleCreation.css'
 import { useParams } from 'react-router';
 import ReactMarkdown from 'react-markdown';
 import PageTransition from '../../components/pageTransition.js';
+import useModal from '../../hook/useModal';
+import Modal from '../../components/Modal/Modal.js'
 
-const Images = ({crea, number}) => {
+const Images = ({crea, number, toggle, setModalSrc}) => {
+
     let imgUrl; let imgAlt;
     if (crea.image1 && crea.image2) {
         if (number === 2) {
@@ -18,7 +21,7 @@ const Images = ({crea, number}) => {
     }
     return (
         imgUrl ?
-        <img className='object-cover min-h-full' src={window.api  + imgUrl} alt={
+        <img className='object-cover min-h-full' onClick={(e)=> {toggle(); setModalSrc(e.target.src)}} src={window.api  + imgUrl} alt={
             imgAlt ? imgAlt : "Image création"} />
         : null
     )
@@ -29,20 +32,23 @@ const SingleCreation = () => {
     const { id } = useParams();
     // eslint-disable-next-line
     const [data, setData] = useState([]);
+    const [modalSrc, setModalSrc] = useState(null)
 
+    const { isShowing, toggle } = useModal()
 
     useEffect(()=> {
-        async function getSingleCreation() {
-            await fetch(window.api + "/creations/" + id)
+        function getSingleCreation() {
+            fetch(window.api + "/creations/" + id)
             .then(res=>res.json())
             .then(data => {
                 setData([data])
             })
         }
         getSingleCreation()
-    }, [id])
+    }, [id, modalSrc])
 
     return (
+    <>
         <div id='creation' className={'container mx-auto my-12' + PageTransition(100, 'opa')}>
             {data.map((crea,index) => <div key={crea.id}>
 
@@ -63,7 +69,7 @@ const SingleCreation = () => {
             <div className="grid grid-cols-2 gap-4 lg:gap-8 mt-20 mb-32 xl:px-16">
                 <div className='w-full'>
 
-                 <Images crea={crea} number={1}/>
+                 <Images crea={crea} number={1} toggle={toggle} setModalSrc={setModalSrc}/>
                         {/* Bouton site */}
                     {   
                         crea.url_site
@@ -72,7 +78,7 @@ const SingleCreation = () => {
                     }
                 </div>
                 <div className='w-full'>
-                <Images crea={crea} number={2}/>
+                <Images crea={crea} number={2} toggle={toggle} setModalSrc={setModalSrc}/>
                         {/* Bouton maquette */}
                     {   
                         crea.url_maquette
@@ -90,6 +96,8 @@ const SingleCreation = () => {
 
             </div>)}
         </div>
+        <Modal isShowing={isShowing} url={modalSrc} toggle={toggle}></Modal>
+    </>
     );
 };
 

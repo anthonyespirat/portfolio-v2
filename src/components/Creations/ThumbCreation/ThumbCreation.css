@@ -23,7 +23,7 @@
     min-width: 100%;
     border-radius: 20px;
     min-height: 100%;
-    background-color: rgba(32, 46, 66, 0.726);
+    background-color: rgba(41, 50, 65, 0.712);
     z-index: 99;
     transition: opacity 0.4s;
 }

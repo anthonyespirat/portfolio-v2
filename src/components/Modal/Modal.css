@@ -1,0 +1,14 @@
+.modal-body {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.808);
+}
+.modal-body img {
+    max-height: 90vh;
+}
