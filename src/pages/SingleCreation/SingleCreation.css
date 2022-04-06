@@ -1,8 +1,22 @@
 #creation img {
     @apply rounded;
+    transition: 0.3s;
+    height: 450px;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    #creation img {
+        height: 300px;
+    }
+}
+#creation img:hover {
+    transform: scale(1.01)
+}
+#creation .img-container {
+    border-radius: 10px;
 }
 #creation .btn {
-    @apply w-1/2 block mx-auto;
+    @apply w-full md:w-1/2 block md:mx-auto;
     background: linear-gradient(262.85deg, rgba(191, 210, 234, 0.051) 0%, rgba(248, 248, 248, 0.054) 100%);
     border: 1px solid #AFAFAF;
 }

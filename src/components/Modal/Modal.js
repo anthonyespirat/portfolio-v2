@@ -5,7 +5,7 @@ const Modal = ({isShowing, toggle, url}) =>  {
             ?
 
         <div className="modal-body" onClick={toggle}>
-                    <img src={url} alt="" />
+                    <img src={url} className='rounded' alt="" />
         </div>
 
         :null

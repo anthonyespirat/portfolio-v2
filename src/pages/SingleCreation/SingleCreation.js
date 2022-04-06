@@ -20,11 +20,10 @@ const Images = ({crea, number, toggle, setModalSrc}) => {
         }
     }
     return (
-        imgUrl ?
-        <div>
-            <img className='object-cover min-h-full' onClick={(e)=> {toggle(); setModalSrc(e.target.src)}} src={window.api  + imgUrl} alt={
-                imgAlt ? imgAlt : "Image création"} />
-        </div>
+        imgUrl
+        ?
+            <img className='object-cover h-full' onClick={(e)=> {toggle(); setModalSrc(e.target.src)}} src={window.api  + imgUrl} alt={
+            imgAlt ? imgAlt : "Image création"} />
         : null
     )
 }
@@ -36,7 +35,8 @@ const SingleCreation = () => {
     const [data, setData] = useState([]);
     const [modalSrc, setModalSrc] = useState(null)
 
-    const { isShowing, toggle } = useModal()
+    const { toggle, isShowing } = useModal()
+    
 
     useEffect(()=> {
         function getSingleCreation() {
@@ -68,31 +68,39 @@ const SingleCreation = () => {
             : null}
 
                 {/* Grandes images */}
-            <div className="grid grid-cols-2 gap-4 lg:gap-8 mt-20 mb-32 xl:px-16">
-                <div className='w-full'>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 mt-20 mb-6 xl:px-16">
+                <div className='img-container'>
 
                  <Images crea={crea} number={1} toggle={toggle} setModalSrc={setModalSrc}/>
+
+                </div>
+                <div className='img-container'>
+                <Images crea={crea} number={2} toggle={toggle} setModalSrc={setModalSrc}/>
+                  
+                </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 mb-16 xl:px-16">
+            <div className='url'>
                         {/* Bouton site */}
-                    {   
+                        {   
                         crea.url_site
                         ? <a href={crea.url_site} target='_blank'  rel='noreferrer' className='text-center btn rounded font-semibold py-4 mt-8'>Visiter le site</a>
                         : <a href='#creation'  className='disable text-center btn rounded font-semibold py-4 mt-8'>Visiter le site</a>
                     }
                 </div>
-                <div className='w-full'>
-                <Images crea={crea} number={2} toggle={toggle} setModalSrc={setModalSrc}/>
-                        {/* Bouton maquette */}
-                    {   
+                <div className="url">
+                                            {/* Bouton maquette */}
+                                            {   
                         crea.url_maquette
-                        ? <a href={crea.url_maquette} target='_blank'  rel='noreferrer' className='text-center btn rounded font-semibold py-4 mt-8'>Voir la maquette</a>
-                        : <a href='#creation'  className='disable text-center btn rounded font-semibold py-4 mt-8'>Voir la maquette</a>
-                    }                    
+                        ? <a href={crea.url_maquette} target='_blank'  rel='noreferrer' className='text-center btn rounded font-semibold py-4 md:mt-8'>Voir la maquette</a>
+                        : <a href='#creation'  className='disable text-center btn rounded font-semibold p-4 mt-8 break-normal'>Voir la maquette</a>
+                    }  
                 </div>
             </div>
 
                 {/* Description #2 */}
-            {crea.description2 ? 
-            <ReactMarkdown className="text-center my-6">{crea.description2}</ReactMarkdown>
+            {crea.description2 
+            ? <ReactMarkdown className="text-center my-6">{crea.description2}</ReactMarkdown>
             : null}
                 
 
