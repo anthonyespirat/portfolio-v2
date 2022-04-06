@@ -21,8 +21,10 @@ const Images = ({crea, number, toggle, setModalSrc}) => {
     }
     return (
         imgUrl ?
-        <img className='object-cover min-h-full' onClick={(e)=> {toggle(); setModalSrc(e.target.src)}} src={window.api  + imgUrl} alt={
-            imgAlt ? imgAlt : "Image création"} />
+        <div>
+            <img className='object-cover min-h-full' onClick={(e)=> {toggle(); setModalSrc(e.target.src)}} src={window.api  + imgUrl} alt={
+                imgAlt ? imgAlt : "Image création"} />
+        </div>
         : null
     )
 }

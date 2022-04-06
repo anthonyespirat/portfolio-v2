@@ -11,7 +11,7 @@
 .thumb img {
     min-height: 300px;
     max-height: 300px;
-    min-width: 380px;
+    min-width: 100%;
     max-width: 380px;
 }
 
@@ -23,7 +23,7 @@
     min-width: 100%;
     border-radius: 20px;
     min-height: 100%;
-    background-color: rgba(41, 50, 65, 0.712);
+    background-color: rgba(30, 40, 58, 0.211);
     z-index: 99;
     transition: opacity 0.4s;
 }
