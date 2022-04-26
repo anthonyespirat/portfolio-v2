@@ -22,7 +22,7 @@ const Images = ({crea, number, toggle, setModalSrc}) => {
     return (
         imgUrl
         ?
-            <img className='object-cover h-full' onClick={(e)=> {toggle(); setModalSrc(e.target.src)}} src={window.api  + imgUrl} alt={
+            <img className='object-cover h-full object-center' onClick={(e)=> {toggle(); setModalSrc(e.target.src)}} src={window.api  + imgUrl} alt={
             imgAlt ? imgAlt : "Image création"} />
         : null
     )
@@ -64,7 +64,7 @@ const SingleCreation = () => {
 
                 {/* Description #1 */}
             {crea.description1 ? 
-            <ReactMarkdown className="text-center my-6">{crea.description1}</ReactMarkdown>
+            <ReactMarkdown className="text-center my-6 leading-7 lg:px-28">{crea.description1}</ReactMarkdown>
             : null}
 
                 {/* Grandes images */}
@@ -89,8 +89,8 @@ const SingleCreation = () => {
                     }
                 </div>
                 <div className="url">
-                                            {/* Bouton maquette */}
-                                            {   
+                        {/* Bouton maquette */}
+                        {   
                         crea.url_maquette
                         ? <a href={crea.url_maquette} target='_blank'  rel='noreferrer' className='text-center btn rounded font-semibold py-4 md:mt-8'>Voir la maquette</a>
                         : <a href='#creation'  className='disable text-center btn rounded font-semibold p-4 mt-8 break-normal'>Voir la maquette</a>
