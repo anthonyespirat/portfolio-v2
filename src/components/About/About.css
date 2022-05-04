@@ -6,3 +6,6 @@
 #about p {
     @apply py-4
 }
+#about b {
+    font-weight: 600;
+}

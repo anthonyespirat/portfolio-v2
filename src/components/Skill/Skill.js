@@ -20,9 +20,9 @@ const Skill = () => {
                 </div>
                 <div className="box lg:col-span-2">
                     <div className="icon">
-                        <img src="/images/Vue.svg" alt="Vect1" />
+                        <img src="/images/React.svg" alt="React" />
                     </div>
-                    <div className="software">Vue</div>
+                    <div className="software">React</div>
                 </div>
                 <div className="box lg:col-span-2">
                     <div className="icon">
