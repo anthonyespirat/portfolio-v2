@@ -2,18 +2,7 @@ import './ThumbCreation.css'
 import { Link } from 'react-router-dom'
 
 const Creations = ({crea, api, loading}) => {
-    
-console.log(crea);
-/*
-    const [creaClass, setCreaClass] = useState("creation")
 
-    useEffect(()=> {
-      
-        setTimeout(()=> {
-            setCreaClass("creation opa")
-        }, 100)
-    }, [])
-*/
 const thumb = crea.thumb
     return (
         <>

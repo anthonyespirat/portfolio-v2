@@ -36,6 +36,7 @@ h1 {
     z-index: -1;
 }
 
+
 #hero h1:after {
     content: url('@/assets/images/radial-min.png');
     display: block;
@@ -65,4 +66,11 @@ h1 {
     100% {
         transform: translateY(0);
     }
+}
+
+@media screen and (min-width: 1024px) {
+    h1{
+        font-size: 6em !important;
+    }
+
 }

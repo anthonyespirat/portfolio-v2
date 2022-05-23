@@ -28,8 +28,9 @@ const Hero = () => {
     return (
         <>
         <div id='hero' className='flex flex-col items-center justify-center .tracking-wide'>
-            <h1 className='text-3em lg:text-6xl font-semibold text-center py-5 px-6 lg:px-32'>Web design et Dev Front dans un seul corps</h1>
-            <p className='py-2 text-gray-400 text-xl tracking-wide'>Ma passion, c’est le web</p>
+            <h1 className='text-6xl sm:text-7xl font-semibold text-center pt-5 pb-4 px-6 lg:px-32'>ANTHONY ESPIRAT</h1>
+            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-regular text-center py-5 px-6 lg:px-32'>Web design et Dev Front dans un seul corps</h2>
+            <p className='py-4 text-gray-400 text-xl tracking-wide'>Ma passion, c’est le web</p>
         </div>
         <Mouse forwardRef={refMouse} className='mouse' />
         </>
